@@ -68,69 +68,47 @@ export default function Home() {
         <nav aria-label="Navegação principal">
           <div className="flex justify-start items-center">
             <Image
-              src="/logo.png"
+              src="/memoji-2.png"
               alt="Logo Dany Massoterapia"
-              width={30}
-              height={30}
-              className="mr-2 rounded-full"
+              width={50}
+              height={60}
+              className="mr-2 rounded-full p-1 border-1 border-slate-300 bg-[#40634d35] shadow-xl"
               priority
             />
-            <a className="text-lg font-semibold" href="/" aria-current="page">Dany Terapia Corporal</a>
+            <a className="font-semibold text-xl text-slate-400" href="/" aria-current="page">Dany Massagem</a>
           </div>
         </nav>
       </header>
 
-      <main className="lg:px-36 bg-white flex flex-col items-center text-center px-6 py-12 pt-6 rounded-t-2xl border-2 border-slate-300 relative" role="main">
-
-        {/* Seção Promoção */}
-        <article className="w-full cursor-pointer p-1 px-4 mb-6 border-green-400 border-2 shadow-md rounded-xl lg:w-[50%]"
-          aria-label="Promoção especial">
-          <h2 className="text-green-600">10% OFF na <strong>PRIMEIRA</strong> sessão! Cupom <strong>DANY10</strong></h2>
-        </article>
-
+      <main className="lg:px-36 bg-white flex flex-col items-center text-center px-6 py-12 pt-6 border-slate-300 relative" role="main">
         {/* Hero Section */}
         <section aria-labelledby="main-heading" className="my-6 lg:w-[80%] lg:py-12">
-          <Image
-            src="/f-2.png"
-            className="absolute w-[45px] top-[180px] right-0"
-            alt="Decoração"
-            width={45}
-            height={45}
-            loading="lazy"
-          />
 
-          <div className="relative z-[99999]">
-            <h1 id="main-heading" className="text-gray-900 text-left text-4xl font-bold mb-6 w-[95%]">
-              Transforme <span className="text-slate-500">cansaço</span> em
-              <span className="text-green-600"> bem-estar!</span>, que tal uma sessão ainda hoje?
-            </h1>
+          <div className="">
+            <div className='relative'>
+              <h1 id="main-heading" className="text-gray-900 text-left text-4xl font-bold leading-12 mb-6">
+                Transforme <span className="text-slate-500 border-slate-200 px-2 rounded-2xl bg-[#dcdcdc5d] shadow-lg">cansaço</span> em
+                <span className="text-green-600 border-slate-200 px-2 mx-1 rounded-2xl bg-[#46ef4f5d] shadow-lg"> bem-estar!</span>, que tal uma sessão ainda hoje?
+              </h1>
+            </div>
 
-            <p className="text-gray-700 text-xl mb-4 text-left">
+            <p className="text-gray-700 text-xl mb-4 text-left font-medium">
               Aproveite os benefícios da terapia corporal em um lugar aconchegante e de fácil localização,
               agende sua sessão hoje mesmo.
             </p>
 
             <ul className="flex justify-start items-center gap-2 mb-12 text-white">
-              <li className="p-2 border-2 border-purple-500 text-purple-500 rounded-md px-4 shadow-md">Massoterapia</li>
-              <li className="p-2 border-2 border-green-600 text-green-600 rounded-sm px-4 shadow-md">Massagem</li>
-              <li className="p-2 border-2 border-pink-500 text-pink-500 rounded-full shadow-md">SPA</li>
+              <li className="p-2 border-2 border-purple-100 text-purple-500 bg-[#9645ff27] font-semibold rounded-2xl px-4 shadow-md">Massoterapia</li>
+              <li className="p-2 border-2 border-green-100 text-green-600 bg-[#10a63d31] font-semibold rounded-2xl px-4 shadow-md">Massagem</li>
+              <li className="p-2 border-2 border-pink-100 text-pink-500 bg-[#f7399b2d] font-semibold rounded-2xl shadow-md">SPA</li>
             </ul>
           </div>
-
-          <Image
-            src="/f-2.png"
-            className="absolute w-[30px] top-[50px] opacity-80 left-0 rotate-180"
-            alt="Decoração"
-            width={30}
-            height={30}
-            loading="lazy"
-          />
 
           {/* CTA Buttons */}
           <div className="lg:flex justify-center items-center lg:gap-2 lg:space-y-0">
             <Link href={"/agendamento"}>
               <button
-                className="my-2 cursor-pointer inline-block w-full bg-[#16a34a] text-white text-lg font-semibold rounded-md px-6 py-3 shadow transition-colors hover:bg-[#13803d]"
+                className="my-2 cursor-pointer inline-block w-full bg-[#16a34a] text-white text-lg font-semibold rounded-md px-6 py-3 shadow-xl transition-colors hover:bg-[#13803d]"
                 aria-label="Agendar Minha Sessão">
                 Agendar Minha Sessão <span className="inline-block">✅</span>
               </button>
@@ -157,8 +135,8 @@ export default function Home() {
         </section>
 
         {/* Seção Sobre */}
-        <section aria-labelledby="sobre-dany" className="text-center my-12">
-          <div className="relative p-4 my-4 flex justify-center items-center">
+        <section aria-labelledby="sobre-dany" className="text-center my-12 px-2 shadow-xl border-slate-200 border-1 bg-slate-100 rounded-xl">
+          <div className="relative p-4 px-0 my-4 flex justify-start items-center">
             <Image
               src="/icone-servico-2.png"
               className="absolute bottom-0"
@@ -169,17 +147,17 @@ export default function Home() {
             />
             <Image
               src="/dany-bg.png"
-              className="w-[120px] h-[120px] border-2 object-cover rounded-xl shadow-md"
+              className="w-[120px] h-[120px] object-cover rounded-xl shadow-xl"
               alt="Dany - Terapeuta profissional"
               width={120}
               height={120}
               loading="lazy"
             />
           </div>
-          <div itemScope itemType="https://schema.org/Person">
-            <h3 id="sobre-dany" className="text-2xl font-bold" itemProp="name">Dany.</h3>
-            <p className="px-8 text-xl py-2" itemProp="description">
-              Terapeuta corporal há +7 anos, garanta relaxamento e qualidade de atendimento em que entende do
+          <div itemScope itemType="https://schema.org/Person" className='text-left'>
+            <h3 id="sobre-dany" className="text-2xl font-bold text-slate-900" itemProp="name">Muito prazer, sou a Dany!</h3>
+            <p className="text-xl py-2 font-medium text-slate-800" itemProp="description">
+              Terapeuta corporal há <span className="text-green-600 border-slate-200 px-2 mx-1 rounded-2xl bg-[#46ef4f5d] shadow-lg"> +7 anos!</span>, garanta relaxamento e qualidade de atendimento em que entende do
               assunto.
             </p>
           </div>
