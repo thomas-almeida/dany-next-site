@@ -40,6 +40,39 @@ const testimonials = [
   }
 ];
 
+const advantages = [
+  {
+    icon: "🏡",
+    title: "Ambiente Seguro e Aconchegante",
+    description: "Espaço pensado para o seu conforto e relaxamento, com higiene e segurança como prioridades.",
+  },
+  {
+    icon: "📆",
+    title: "Horários Flexíveis",
+    description: "Atendimento de segunda a sábado, com horários flexíveis para se adequar à sua rotina.",
+  },
+  {
+    icon: "🗺",
+    title: "Localização Privilegiada",
+    description: "Próximo às estações Paraíso e Brigadeiro do metrô, fácil acesso para todos em São Paulo - SP.",
+  },
+  {
+    icon: "🏆",
+    title: "Profissionalismo e Qualidade",
+    description: "Terapeuta com mais de 7 anos de experiência, garantindo um atendimento de alta qualidade.",
+  },
+  {
+    icon: "💆‍♀️",
+    title: "Atendimento Personalizado",
+    description: "Cada sessão é adaptada às suas necessidades, garantindo o máximo de relaxamento e bem-estar.",
+  },
+  {
+    icon: "🎓",
+    title: "Profissional Certificada",
+    description: "Formação em massoterapia e cursos de especialização, você estará em boas mãos.",
+  }
+]
+
 export default function Home() {
   return (
     <>
@@ -65,6 +98,102 @@ export default function Home() {
         }}
       />
 
+      <Script
+        id="schema-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Terapia Corporal é pra mim?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Com certeza! A terapia corporal é indicada para quem busca alívio de tensões musculares, melhoria da postura e sensação de bem-estar geral e garantir remover da sua rotina o stress do dia-a-dia, não importa sexo ou idade."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Como funciona o atendimento?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Agendamos uma sessão de 30 á 40 minutos em um espaço super aconchegante e de fácil localização. Durante a sessão, conversamos sobre suas necessidades e aplico técnicas de massagem personalizadas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais os horários disponíveis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Atendo de segunda a sábado, das 9h às 16h. Podemos encontrar o melhor horário para você conforme sua rotina."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual o valor da sessão?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O valor varia entre R$120 e R$250, dependendo da técnica e duração, nos chame no Whatsapp e tire mais dúvidas diretamente comigo! Consulte pacotes promocionais e descontos para pacotes."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+      <Script
+        id="seo-twitter-card"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Dany Massoterapia - Massagem Profissional em São Paulo" />
+            <meta name="twitter:description" content="Massoterapia profissional em São Paulo: massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão com 15% OFF na primeira visita!" />
+            <meta name="twitter:image" content="/logo.png" />
+            <meta name="robots" content="index, follow" />
+            <link rel="canonical" href="https://seusite.com/" />
+          `
+        }}
+      />
+      <Script
+        id="schema-reviews"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Dany Massoterapia",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "3"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": "Jonas Macedo",
+                "reviewBody": "Já faço massagem com a Dani a muito tempo, e sempre foi muito bom! Ela é uma pessoa muito bacana, simpática, e o papo flui bem durante a sessão. A massagem é de alta qualidade, ela é muito profissional.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+              },
+              {
+                "@type": "Review",
+                "author": "Miguel Pereira",
+                "reviewBody": "A Dani é uma pessoa maravilhosa simpática te atende sempre com um belo sorriso no rosto muita atenciosa sem fala do ambiente sempre limpo e aconchegante.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+              },
+              {
+                "@type": "Review",
+                "author": "Elaine Santos",
+                "reviewBody": "Adorei um excelente atendimento, super indico.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+              }
+            ]
+          })
+        }}
+      />
+
       <header className="flex px-6 py-6 flex-col" role="banner">
         <nav aria-label="Navegação principal">
           <div className="flex justify-start items-center">
@@ -76,7 +205,7 @@ export default function Home() {
               className="mr-2 rounded-full p-1 border-1 border-slate-300 bg-[#40634d35] shadow-xl"
               priority
             />
-            <a className="font-semibold text-xl text-slate-400" href="/" aria-current="page">Dany Massagem</a>
+            <a className="font-semibold text-xl text-green-600" href="/" aria-current="page">Dany Massagem</a>
           </div>
         </nav>
       </header>
@@ -158,7 +287,7 @@ export default function Home() {
           <div itemScope itemType="https://schema.org/Person" className='text-left'>
             <h2 id="sobre-dany" className="text-2xl font-bold text-slate-900" itemProp="name">Muito prazer, sou a Dany!</h2>
             <p className="text-xl py-2 font-medium text-slate-800" itemProp="description">
-              Terapeuta corporal há <span className="text-green-600 border-slate-200 px-2 mx-1 rounded-2xl bg-[#46ef4f5d] shadow-lg"> +7 anos!</span>, garanta relaxamento e qualidade de atendimento em que entende do
+              Terapeuta corporal <span className="border-slate-200 px-2 mx-1 rounded-2xl text-purple-500 bg-[#9645ff27] shadow-lg">certificada 🥇</span>  há <span className="text-green-600 border-slate-200 px-2 mx-1 rounded-2xl bg-[#46ef4f5d] shadow-lg"> +7 anos!</span>, garanta relaxamento e qualidade de atendimento em que entende do
               assunto.
             </p>
           </div>
@@ -166,6 +295,30 @@ export default function Home() {
 
         {/* Seção Depoimentos */}
         <section className="my-12">
+
+
+          <div className='flex justify-start items-baseline gap-2'>
+            <b className='text-2xl'>ℹ</b>
+            <h2 id="depoimentos" className="text-left text-2xl font-bold text-slate-900 mb-6" itemProp="name">Porque fazer terapia corporal e massagem comigo?</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {advantages.map((advantage, index) => (
+              <article
+                key={index}
+                className="p-4 w-full border-2 border-slate-400 rounded-md shadow-lg"
+                itemScope
+                itemType="https://schema.org/Service"
+                role="article"
+              >
+                <div className="flex justify-start items-center text-left mb-4">
+                  <span className="text-3xl mr-2" itemProp="serviceType">{advantage.icon}</span>
+                  <h3 className="text-xl font-bold" itemProp="name">{advantage.title}</h3>
+                </div>
+                <p className="text-left" itemProp="description">{advantage.description}</p>
+              </article>
+            ))}
+          </div>
 
           <div className='flex justify-start items-baseline gap-2'>
             <b className='text-2xl'>⭐</b>
