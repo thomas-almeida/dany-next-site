@@ -17,7 +17,7 @@ export default function FaqAccordion() {
     {
       question: 'Quais os horários disponíveis?',
       answer:
-        'Atendo de segunda a sexta-feira, das 9h às 16h. Podemos encontrar o melhor horário para você conforme sua rotina.',
+        'Atendo de segunda a sábado, das 9h às 16h. Podemos encontrar o melhor horário para você conforme sua rotina.',
     },
     {
       question: 'Qual o valor da sessão?',
