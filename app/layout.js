@@ -1,5 +1,6 @@
 
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Dany Terapia Corporal - Massagem Profissional em São Paulo",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
+      <Analytics />
       <head>
         <meta name="google-site-verification" content="Q0zjLFrZMxnyQ0pg7qy-xqrieBim5tK-7itR74qjN0w" />
       </head>
