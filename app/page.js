@@ -9,6 +9,13 @@ export const metadata = {
   description: 'Massoterapia profissional em São Paulo: massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão com 15% OFF na primeira visita!',
   keywords: 'massagem relaxante, terapia corporal, bem-estar, agendamento online, drenagem linfática',
   authors: [{ name: 'Dany Massoterapia' }],
+  robots: 'index, follow',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dany Massoterapia - Massagem Profissional em São Paulo',
+    description: 'Massoterapia profissional em São Paulo: massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão com 15% OFF na primeira visita!',
+    images: ['/logo.png']
+  },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
@@ -42,34 +49,19 @@ const testimonials = [
 
 const advantages = [
   {
-    icon: "🏡",
-    title: "Ambiente Seguro e Aconchegante",
-    description: "Espaço pensado para o seu conforto e relaxamento, com higiene e segurança como prioridades.",
+    icon: "1",
+    title: "Clique em: Agendar Minha Sessão",
+    description: "Ao clicar você será redirecionado(a) para o nosso Whatsapp",
   },
   {
-    icon: "📆",
-    title: "Horários Flexíveis",
-    description: "Atendimento de segunda a sábado, com horários flexíveis para se adequar à sua rotina.",
+    icon: "2",
+    title: "Escolha o melhor horário para você!",
+    description: "Escolha o melhor horário de segunda à sábado, com horários flexíveis para se adequar à sua rotina.",
   },
   {
-    icon: "🗺",
-    title: "Localização Privilegiada",
-    description: "Próximo às estações Paraíso e Brigadeiro do metrô, fácil acesso para todos em São Paulo - SP.",
-  },
-  {
-    icon: "🏆",
-    title: "Profissionalismo e Qualidade",
-    description: "Terapeuta com mais de 7 anos de experiência, garantindo um atendimento de alta qualidade.",
-  },
-  {
-    icon: "💆‍♀️",
-    title: "Atendimento Personalizado",
-    description: "Cada sessão é adaptada às suas necessidades, garantindo o máximo de relaxamento e bem-estar.",
-  },
-  {
-    icon: "🎓",
-    title: "Profissional Certificada",
-    description: "Formação em massoterapia e cursos de especialização, você estará em boas mãos.",
+    icon: "3",
+    title: "Chega de Dores, Incômodos e Estresse!",
+    description: "Recupere sua energia e bem-estar. Sinta o alívio imediato em um ambiente acolhedor, pertinho de você.",
   }
 ]
 
@@ -144,20 +136,6 @@ export default function Home() {
       />
 
       <Script
-        id="seo-twitter-card"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Dany Massoterapia - Massagem Profissional em São Paulo" />
-            <meta name="twitter:description" content="Massoterapia profissional em São Paulo: massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão com 15% OFF na primeira visita!" />
-            <meta name="twitter:image" content="/logo.png" />
-            <meta name="robots" content="index, follow" />
-            <link rel="canonical" href="https://seusite.com/" />
-          `
-        }}
-      />
-      <Script
         id="schema-reviews"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -194,87 +172,79 @@ export default function Home() {
         }}
       />
 
-      <header className="flex px-6 py-6 flex-col" role="banner">
-        <nav aria-label="Navegação principal">
-          <div className="flex justify-start items-center">
-            <Image
-              src="/memoji-2.png"
-              alt="Logo Dany Massoterapia"
-              width={50}
-              height={60}
-              className="mr-2 rounded-full p-1 border-1 border-slate-300 bg-[#40634d35] shadow-xl"
-              priority
-            />
-            <a className="font-semibold text-xl text-green-600" href="/" aria-current="page">Dany Massagem</a>
-          </div>
-        </nav>
-      </header>
-
-      <main className="lg:px-36 bg-white flex flex-col items-center text-center px-6 py-12 pt-6 border-slate-300 relative" role="main">
+      <main className="lg:px-36 bg-white flex flex-col items-center text-center border-slate-300 relative" role="main">
         {/* Hero Section */}
-        <section aria-labelledby="main-heading" className="my-6 lg:w-[80%] lg:py-12">
+        <section aria-labelledby="main-heading" className="">
+          <div className="relative w-full h-full text-white">
+            <video
+              id="bgVideo"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              webkit-playsinline="true"
+              x5-playsinline="true"
+              preload="auto"
+            >
+              <source src="/backgrounds/bg-video.mp4" type="video/mp4" />
+            </video>
+            <div className='relative z-10 bg-black/40 bg-opacity-50 px-6 py-16'>
+              <header className="flex px-6 py-6 flex-col" role="banner">
+                <nav aria-label="Navegação principal">
+                  <div className="flex justify-center items-center">
+                    <Image
+                      src="/logo-3.png"
+                      alt="Logo Dany Massoterapia"
+                      width={60}
+                      height={60}
+                      className=""
+                      priority
+                    />
+                    <a className="font-semibold text-xl" href="/" aria-current="page">Dany Massagem</a>
+                  </div>
+                </nav>
+              </header>
 
-          <div className="">
-            <div className='relative'>
-              <h1 id="main-heading" className="text-gray-900 text-left text-4xl font-bold leading-12 mb-6">
-                Transforme <span className="text-slate-500 border-slate-200 px-2 rounded-2xl bg-[#dcdcdc5d] shadow-lg">cansaço</span> em
-                <span className="text-green-600 border-slate-200 px-2 mx-1 rounded-2xl bg-[#46ef4f5d] shadow-lg"> bem-estar!</span>, que tal uma sessão ainda hoje?
-              </h1>
+              <div className="">
+                <div className='relative'>
+                  <h1 id="main-heading" className="text-4xl text-left font-semibold leading-9 tracking-tight mb-6">
+                    Massagem relaxante e terapêutica em são paulo: diga adeus ao estresse e dores crônicas
+                  </h1>
+                </div>
+
+                <p className="text-xl mb-6 font-medium text-left leading-6">
+                  Aproveite os benefícios da terapia corporal em um lugar aconchegante e de fácil localização,
+                  agende sua sessão hoje mesmo.
+                </p>
+              </div>
+              {/* CTA Buttons */}
+              <div className="lg:flex justify-center items-center lg:gap-2 lg:space-y-0">
+                <Link href={"https://wa.me/5511987871375"}>
+                  <button
+                    className="my-2 cursor-pointer inline-block w-full bg-[#16a34a] text-white text-lg font-semibold rounded-md px-6 py-3 shadow-xl transition-colors hover:bg-[#13803d]"
+                    aria-label="Agendar Minha Sessão">
+                    Agendar Minha Sessão
+                  </button>
+                </Link>
+
+                <Link href={"https://wa.me/5511987871375"}>
+                  <button
+                    className="my-2 cursor-pointer flex justify-center items-center w-full text-lg font-semibold rounded-md px-6 py-3 shadow transition-colors border border-white hover:bg-green-50"
+                    aria-label="Tirar Dúvidas no WhatsApp"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <p>Tire suas Dúvidas</p>
+                  </button>
+                </Link>
+              </div>
             </div>
-
-            <p className="text-gray-700 text-xl mb-4 text-left font-medium">
-              Aproveite os benefícios da terapia corporal em um lugar aconchegante e de fácil localização,
-              agende sua sessão hoje mesmo.
-            </p>
-
-            <ul className="flex justify-start items-center gap-2 mb-12 text-white">
-              <li className="p-2 border-2 border-purple-100 text-purple-500 bg-[#9645ff27] font-semibold rounded-2xl px-4 shadow-md">Massoterapia</li>
-              <li className="p-2 border-2 border-green-100 text-green-600 bg-[#10a63d31] font-semibold rounded-2xl px-4 shadow-md">Massagem</li>
-              <li className="p-2 border-2 border-pink-100 text-pink-500 bg-[#f7399b2d] font-semibold rounded-2xl shadow-md">SPA</li>
-            </ul>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="lg:flex justify-center items-center lg:gap-2 lg:space-y-0">
-            <Link href={"https://wa.me/5511987871375"}>
-              <button
-                className="my-2 cursor-pointer inline-block w-full bg-[#16a34a] text-white text-lg font-semibold rounded-md px-6 py-3 shadow-xl transition-colors hover:bg-[#13803d]"
-                aria-label="Agendar Minha Sessão">
-                Agendar Minha Sessão <span className="inline-block">✅</span>
-              </button>
-            </Link>
-
-            <Link href={"https://wa.me/5511987871375"}>
-              <button
-                className="my-2 cursor-pointer flex justify-center items-center w-full text-lg font-semibold rounded-md px-6 py-3 shadow transition-colors border border-[#16a34a] hover:bg-green-50"
-                aria-label="Tirar Dúvidas no WhatsApp"
-                target="_blank"
-                rel="noopener noreferrer">
-                <p>Tire Dúvidas no WhatsApp</p>
-                <Image
-                  src="/whatsapp.webp"
-                  className="w-[30px] ml-1"
-                  alt="Ícone do WhatsApp"
-                  width={30}
-                  height={30}
-                  loading="lazy"
-                />
-              </button>
-            </Link>
           </div>
         </section>
 
         {/* Seção Sobre */}
-        <section aria-labelledby="sobre-dany" className="text-center my-12 px-4 py-4 shadow-xl border-slate-200 border-1 bg-[#fedced80] rounded-xl">
+        <section aria-labelledby="sobre-dany" className="text-center my-12 px-8 py-4">
           <div className="relative px-0 my-4 flex justify-start items-center">
-            <Image
-              src="/icone-servico-2.png"
-              className="absolute bottom-0"
-              alt="Ícone de massagem"
-              width={40}
-              height={40}
-              loading="lazy"
-            />
             <Image
               src="/dany-bg.png"
               className="w-[120px] h-[120px] object-cover rounded-xl shadow-xl"
@@ -287,20 +257,17 @@ export default function Home() {
           <div itemScope itemType="https://schema.org/Person" className='text-left'>
             <h2 id="sobre-dany" className="text-2xl font-bold text-slate-900" itemProp="name">Muito prazer, sou a Dany!</h2>
             <p className="text-xl py-2 font-medium text-slate-800" itemProp="description">
-              Terapeuta corporal <span className="border-slate-200 px-2 mx-1 rounded-2xl text-purple-500 bg-[#9645ff27] shadow-lg">certificada 🥇</span>  há <span className="text-green-600 border-slate-200 px-2 mx-1 rounded-2xl bg-[#46ef4f5d] shadow-lg"> +7 anos!</span>, garanta relaxamento e qualidade de atendimento em que entende do
-              assunto.
+              Você está cansado(a) de conviver com aquela dor persistente no pescoço ou lombar? sei como é frustrante lidar com isso dia após dia.
+            </p>
+            <p className="text-xl py-2 font-medium text-slate-800" itemProp="description">
+              Sou uma Terapeuta corporal certificada há 10 anos entregando com excelência relaxamento e qualidade de atendimento. Não adie seu bem-estar! Agende agora e sinta o alívio imediato em um ambiente acolhedor, pertinho de você.
             </p>
           </div>
         </section>
 
         {/* Seção Depoimentos */}
-        <section className="my-12">
-
-
-          <div className='flex justify-start items-baseline gap-2'>
-            <b className='text-2xl'>ℹ</b>
-            <h2 id="depoimentos" className="text-left text-2xl font-bold text-slate-900 mb-6" itemProp="name">Porque fazer terapia corporal e massagem comigo?</h2>
-          </div>
+        <section className="my-8 px-8">
+          <h2 className="text-left text-3xl font-bold text-slate-900 mb-6 tracking-tight leading-7">Sono melhor, postura corrigida e bem-estar em só 3 passos:</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {advantages.map((advantage, index) => (
@@ -311,58 +278,25 @@ export default function Home() {
                 itemType="https://schema.org/Service"
                 role="article"
               >
-                <div className="flex justify-start items-center text-left mb-4">
-                  <span className="text-3xl mr-2" itemProp="serviceType">{advantage.icon}</span>
-                  <h3 className="text-xl font-bold" itemProp="name">{advantage.title}</h3>
+
+                <div className="flex justify-start items-start text-left mb-4">
+                  <span className="text-6xl italic mr-2 mt-1 text-green-500" itemProp="serviceType">{advantage.icon}</span>
+                  <div className="flex-1 pl-2">
+                    <h3 className="text-xl font-bold leading-5 mb-2" itemProp="name">{advantage.title}</h3>
+                    <p className="text-left leading-6" itemProp="description">{advantage.description}</p>
+                  </div>
                 </div>
-                <p className="text-left" itemProp="description">{advantage.description}</p>
+
               </article>
             ))}
-          </div>
-
-          <div className='flex justify-start items-baseline gap-2'>
-            <b className='text-2xl'>⭐</b>
-            <h2 id="depoimentos" className="text-left text-2xl font-bold text-slate-900 mb-6" itemProp="name">Alguns dos meus clientes satisfeitos</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <article
-                key={index}
-                className="p-4 w-full border-2 border-slate-400 rounded-md shadow-lg"
-                itemScope
-                itemType="https://schema.org/Review"
-                role="article"
-              >
-                <div className="flex justify-start items-center text-left mb-4">
-                  <img src="/google-logo.png" className='w-6 mr-2' alt="" />
-                  <h3 className="text-xl font-bold" itemProp="author">{testimonial.name}</h3>
-                </div>
-                <blockquote>
-                  <p className="text-left" itemProp="reviewBody">{testimonial.text}</p>
-                </blockquote>
-              </article>
-            ))}
-          </div>
-          <div className='flex justify-center items-center pt-6'>
-            <p className="text-slate-400 text-center">Depoimentos reais do Google</p>
-            <img src="/google-logo.png" className='w-4 ml-2' alt="" />
           </div>
         </section>
 
         {/* Seção Localização */}
-        <section aria-labelledby="localizacao" className="my-16 text-center w-full">
+        <section aria-labelledby="localizacao" className="my-16 px-8 text-center w-full">
           <div className="text-left">
             <div className='flex justify-start items-center gap-2'>
-              <Image
-                src="/icone-2-local-da-massagem.png"
-                alt="Ícone de localização"
-                width={80}
-                height={80}
-                className="mb-4"
-                loading="lazy"
-              />
-              <h2 id="localizacao" className="text-left text-4xl font-bold text-gray-900 mb-2">O Local</h2>
+              <h2 id="localizacao" className="text-left text-3xl font-bold text-slate-900 mb-6 tracking-tight leading-7">Super fácil de chegar!</h2>
             </div>
             <p className="text-gray-700 text-xl mb-4">
               Espaço aconchegante e de fácil acesso, próximo à estação <b>Paraíso</b> e <b>Brigadeiro</b> da linha <b className='text-blue-500'>Azul</b> do metrô.
@@ -412,16 +346,9 @@ export default function Home() {
         </section>
 
         {/* Seção Serviços */}
-        <section aria-labelledby="servicos" className="mt-16 w-full">
+        <section aria-labelledby="servicos" className="mt-16 px-8 w-full">
           <div className="text-left">
             <div className='flex justify-start items-center gap-2'>
-              <Image
-                src="/icone-3-servicos.png"
-                alt="Ícone de serviços"
-                width={100}
-                height={80}
-                loading="lazy"
-              />
               <h2 id="servicos" className="text-4xl font-bold text-gray-900 mb-2">Atendimentos</h2>
             </div>
             <p className='text-xl'>Serviços que garantem o bem-estar e o relaxamento de uma boa massagem</p>
@@ -500,7 +427,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Saiba Mais no WhatsApp
+                Saiba Mais
                 <Image
                   src="/whatsapp.webp"
                   className="w-[25px] ml-1"
@@ -518,7 +445,7 @@ export default function Home() {
         <FaqAccordion />
 
         {/* CTA Final */}
-        <section aria-labelledby="cta-final" className="my-20 text-center w-full">
+        <section aria-labelledby="cta-final" className="my-20 px-8 text-left w-full">
           <h3 id="cta-final" className="text-2xl font-bold mb-4">Transforme Seu Bem-Estar Hoje Mesmo!</h3>
           <p className="text-lg mb-8">Agende sua sessão hoje mesmo, fácil localização e lugar aconchegante.</p>
           <a
@@ -531,8 +458,40 @@ export default function Home() {
 
       </main>
 
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function() {
+              // Força a reprodução do vídeo em dispositivos iOS
+              const video = document.getElementById('bgVideo');
+              
+              // Tenta reproduzir o vídeo
+              const playPromise = video.play();
+              
+              // Se a promessa for rejeitada (como em alguns navegadores móveis)
+              if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                  // Adiciona um evento de toque para permitir a reprodução após interação do usuário
+                  document.body.addEventListener('click', function playVideo() {
+                    video.play();
+                    // Remove o event listener após o primeiro toque
+                    document.body.removeEventListener('click', playVideo);
+                  }, { once: true });
+                });
+              }
+              
+              // Garante que o vídeo continue em loop mesmo se houver pausas
+              video.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+              });
+            });
+          `,
+        }}
+      />
+
       {/* WhatsApp Fixed */}
-      <aside className="fixed bottom-6 right-4" aria-label="Atendimento via WhatsApp">
+      <aside className="fixed bottom-6 right-4 z-10" aria-label="Atendimento via WhatsApp">
         <a
           href="https://wa.me/5511987871375"
           target="_blank"

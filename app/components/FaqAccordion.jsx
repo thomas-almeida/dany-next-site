@@ -33,7 +33,7 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section id="faq" aria-labelledby="perguntas-frequentes" className="w-full py-12">
+    <section id="faq" aria-labelledby="perguntas-frequentes" className="w-full px-8 py-12">
       <div className="w-full mx-auto text-center mb-8">
         <h2 id='perguntas-frequentes' className="text-3xl font-bold text-gray-900">Perguntas Frequentes</h2>
       </div>
