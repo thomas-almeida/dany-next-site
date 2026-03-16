@@ -80,7 +80,7 @@ export default function Home() {
 
       <main className="bg-white flex flex-col items-center border-slate-300 relative" role="main">
         {/* Hero Section - Desktop Friendly */}
-        <section aria-labelledby="main-heading" className="relative w-full overflow-hidden min-h-[80vh] flex items-center justify-center">
+        <section aria-labelledby="main-heading" className="relative w-full overflow-hidden min-h-screen flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <video
               id="bgVideo"
@@ -226,7 +226,7 @@ export default function Home() {
 
         <div className="w-full max-w-6xl mx-auto px-6">
           {/* Seção Vantagens - Grid 3 Colunas Desktop */}
-          <section className="my-24 text-left">
+          <section className="text-left">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 tracking-tight">Sono melhor e postura corrigida em 3 passos:</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {advantages.map((advantage, index) => (
@@ -288,7 +288,7 @@ export default function Home() {
 
         <div className="w-full max-w-4xl mx-auto px-6">
           <FaqAccordion />
-          
+
           <section aria-labelledby="cta-final" className="my-24 text-center">
             <h3 id="cta-final" className="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">Transforme Seu Bem-Estar Hoje!</h3>
             <p className="text-xl mb-10 text-slate-600">Fácil localização e lugar aconchegante esperando por você.</p>
@@ -304,7 +304,7 @@ export default function Home() {
       <script dangerouslySetInnerHTML={{ __html: `(function(){const v=document.getElementById('bgVideo');if(!v)return;const a=()=>{v.play().catch(()=>{const p=()=>{v.play();['click','touchstart','scroll'].forEach(e=>document.removeEventListener(e,p))};['click','touchstart','scroll'].forEach(e=>document.addEventListener(e,p,{once:true}))})};a();document.addEventListener('DOMContentLoaded',a);v.addEventListener('ended',()=>v.play())})()` }} />
 
       {/* WhatsApp Fixed */}
-      <aside className="fixed bottom-10 right-10 z-50">
+      <aside className="fixed bottom-10 right-2 z-50">
         <Link href="https://wa.me/5511987871375" target="_blank" rel="noopener noreferrer">
           <Image src="/whatsapp.webp" alt="WhatsApp" width={80} height={80} className="hover:scale-110 transition-transform drop-shadow-2xl" priority />
         </Link>
