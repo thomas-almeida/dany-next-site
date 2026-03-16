@@ -29,21 +29,21 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://danyterapiacorporal.vercel.app'),
+  metadataBase: new URL('https://danyterapia.top'),
   alternates: {
     canonical: '/',
     languages: {
-      'pt-BR': '/pt-BR',
+      'pt-BR': '/',
     },
   },
   openGraph: {
     title: 'Dany Massoterapia - Massagem Profissional em São Paulo',
-    description: 'Massoterapia profissional em São Paulo: massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão com 15% OFF na primeira visita!',
-    url: 'https://danyterapiacorporal.vercel.app',
+    description: 'Massoterapia profissional na Vila Mariana e Paraíso: massagem relaxante, terapêutica e drenagem linfática. Agende com 15% OFF!',
+    url: 'https://danyterapia.top',
     siteName: 'Dany Massoterapia',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/logo.png',
         width: 1200,
         height: 630,
         alt: 'Dany Massoterapia - Massagem Profissional',

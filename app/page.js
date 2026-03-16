@@ -3,39 +3,19 @@ import Link from 'next/link';
 import Script from 'next/script';
 import FaqAccordion from './components/FaqAccordion';
 import AddressIframe from './components/AddressIframe';
+import SpaceCarousel from './components/SpaceCarousel';
+import TestimonialCarousel from './components/TestimonialCarousel';
 
 export const metadata = {
-  title: 'Dany Massoterapia - Massagem Profissional em São Paulo',
-  description: 'Massoterapia profissional em São Paulo: massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão com 15% OFF na primeira visita!',
-  keywords: 'massagem relaxante, terapia corporal, bem-estar, agendamento online, drenagem linfática',
-  authors: [{ name: 'Dany Massoterapia' }],
-  robots: 'index, follow',
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Dany Massoterapia - Massagem Profissional em São Paulo',
-    description: 'Massoterapia profissional em São Paulo: massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão com 15% OFF na primeira visita!',
-    images: ['/logo.png']
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'pt_BR',
-    url: 'https://seusite.com',
-    siteName: 'Dany Massoterapia',
-    images: [
-      {
-        url: '/logo.png',
-        width: 800,
-        height: 600,
-        alt: 'Dany Massoterapia',
-      },
-    ],
-  },
+  title: 'Dany Massoterapia | Massagem na Vila Mariana e Paraíso - SP',
+  description: 'Massoterapia profissional em São Paulo (Vila Mariana e Paraíso). Massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão hoje!',
+  keywords: 'massagem relaxante vila mariana, massagem paraíso sp, terapia corporal são paulo, drenagem linfática vila mariana, massoterapeuta sp',
 };
 
 const testimonials = [
   {
     name: "Jonas Macedo",
-    text: "Já faço massagem com a Dani a muito tempo, e sempre foi muito bom! Ela é uma pessoa muito bacana, simpática, e o papo flui bem durante a sessão. A massagem é de alta qualidade, ela é muito profissional."
+    text: "Já faço massagem com a Dani a muito tempo, e sempre foi muito bom! Ela é uma pessoa muito bacana, simpática."
   },
   {
     name: "Miguel Pereira",
@@ -44,6 +24,14 @@ const testimonials = [
   {
     name: "Elaine Santos",
     text: "Adorei um excelente atendimento, super indico."
+  },
+  {
+    name: "Adriano Silva",
+    text: "e o papo flui bem durante a sessão. A massagem é de alta qualidade, ela é muito profissional."
+  },
+  {
+    name: "Luiz Felipe",
+    text: "Lugar aconchegante e bem organizado, nota 10"
   }
 ];
 
@@ -56,7 +44,7 @@ const advantages = [
   {
     icon: "2",
     title: "Escolha o melhor horário para você!",
-    description: "Escolha o melhor horário de segunda à sábado, com horários flexíveis para se adequar à sua rotina.",
+    description: "Escolha o melhor horário de Segunda à Sexta-feira, com horários flexíveis para se adequar à sua rotina.",
   },
   {
     icon: "3",
@@ -174,7 +162,7 @@ export default function Home() {
 
       <main className="lg:px-36 bg-white flex flex-col items-center text-center border-slate-300 relative" role="main">
         {/* Hero Section */}
-        <section aria-labelledby="main-heading" className="">
+        <section aria-labelledby="main-heading" className="relative w-full overflow-hidden">
           <div className="relative w-full h-full text-white">
             <video
               id="bgVideo"
@@ -182,9 +170,8 @@ export default function Home() {
               loop
               muted
               playsInline
+              poster="/dany-bg.png"
               className="absolute inset-0 w-full h-full object-cover z-0"
-              webkit-playsinline="true"
-              x5-playsinline="true"
               preload="auto"
             >
               <source src="/backgrounds/bg-video.mp4" type="video/mp4" />
@@ -201,21 +188,20 @@ export default function Home() {
                       className=""
                       priority
                     />
-                    <a className="font-semibold text-xl" href="/" aria-current="page">Dany Massagem</a>
+                    <a className="font-semibold text-xl" href="/" title="Dany Massoterapia Home">Dany Massagem</a>
                   </div>
                 </nav>
               </header>
 
               <div className="">
                 <div className='relative'>
-                  <h1 id="main-heading" className="text-4xl text-left font-semibold leading-9 tracking-tight mb-6">
-                    Massagem relaxante e terapêutica em são paulo: diga adeus ao estresse e dores crônicas
+                  <h1 id="main-heading" className="text-4xl text-left font-bold leading-9 tracking-tight mb-6">
+                    Massagem na Vila Mariana e Paraíso: Diga Adeus ao Estresse e Dores Crônicas
                   </h1>
                 </div>
 
                 <p className="text-xl mb-6 font-medium text-left leading-6">
-                  Aproveite os benefícios da terapia corporal em um lugar aconchegante e de fácil localização,
-                  agende sua sessão hoje mesmo.
+                  Aproveite os benefícios da terapia corporal em um lugar aconchegante e de fácil localização em São Paulo.
                 </p>
               </div>
               {/* CTA Buttons */}
@@ -265,7 +251,43 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Depoimentos */}
+        {/* Seção Serviços (MOVIDA PARA CIMA) */}
+        <section aria-labelledby="servicos" className="mt-8 px-8 w-full">
+          <div className="text-left">
+            <h2 id="servicos" className="text-4xl font-bold text-gray-900 mb-2">Atendimentos</h2>
+            <p className='text-xl text-slate-600'>Serviços que garantem o bem-estar e o relaxamento de uma boa massagem</p>
+          </div>
+
+          <div className="my-8 space-y-6">
+            <article className="border-2 border-slate-300 rounded-2xl shadow-md text-left overflow-hidden bg-white" itemScope itemType="https://schema.org/Service">
+              <Image src={'/atendimento-4.avif'} className='w-full h-48 object-cover' width={500} height={200} alt='Massagem Terapêutica' />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold" itemProp="name">Massagem Terapêutica</h3>
+                <p className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold my-2">R$ 150,00 - 30min</p>
+                <p className="text-lg text-slate-600 mb-4" itemProp="description">Técnica profissional para alívio de dores musculares e melhoria da circulação sanguínea.</p>
+                <Link href="https://wa.me/5511987871375" className="inline-block w-full bg-[#16a34a] text-white text-center font-bold py-3 rounded-xl shadow-lg">Agendar Agora ✅</Link>
+              </div>
+            </article>
+
+            <article className="border-2 border-slate-300 rounded-2xl shadow-md text-left overflow-hidden bg-white" itemScope itemType="https://schema.org/Service">
+              <Image src={'/atendimento-2.jpg'} className='w-full h-48 object-cover' width={500} height={200} alt='Drenagem Linfática' />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold" itemProp="name">Drenagem Linfática</h3>
+                <p className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold my-2">R$ 150,00 - 40min</p>
+                <p className="text-lg text-slate-600 mb-4" itemProp="description">Técnica especializada para redução de inchaços e eliminação de toxinas.</p>
+                <Link href="https://wa.me/5511987871375" className="inline-block w-full bg-[#16a34a] text-white text-center font-bold py-3 rounded-xl shadow-lg">Agendar Agora ✅</Link>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* Seção Depoimentos (AGORA AUTOMÁTICO E INFINITO) */}
+        <section className="my-16 px-8 w-full max-w-4xl mx-auto">
+          <h2 className="text-left text-3xl font-bold text-slate-900 mb-8 tracking-tight">+8 anos no mercado que falam por mim</h2>
+          <TestimonialCarousel testimonials={testimonials} />
+        </section>
+
+        {/* Seção Vantagens (3 passos) */}
         <section className="my-8 px-8">
           <h2 className="text-left text-3xl font-bold text-slate-900 mb-6 tracking-tight leading-7">Sono melhor, postura corrigida e bem-estar em só 3 passos:</h2>
 
@@ -278,12 +300,13 @@ export default function Home() {
                 itemType="https://schema.org/Service"
                 role="article"
               >
-
-                <div className="flex justify-start items-start text-left mb-4">
-                  <span className="text-6xl italic mr-2 mt-1 text-green-500" itemProp="serviceType">{advantage.icon}</span>
-                  <div className="flex-1 pl-2">
-                    <h3 className="text-xl font-bold leading-5 mb-2" itemProp="name">{advantage.title}</h3>
-                    <p className="text-left leading-6" itemProp="description">{advantage.description}</p>
+                <div className=" justify-start items-start text-left relative">
+                  <span className="text-6xl italic text-green-500/60 absolute z-40 right-0" itemProp="serviceType">
+                    <p className="">{advantage.icon}</p>
+                  </span>
+                  <div className="flex-1 pl-2 z-50">
+                    <h3 className="text-xl font-bold leading-6 mb-2 w-[80%]" itemProp="name">{advantage.title}</h3>
+                    <p className="text-left leading-7 w-[80%]" itemProp="description">{advantage.description}</p>
                   </div>
                 </div>
 
@@ -306,140 +329,52 @@ export default function Home() {
 
             <Link href={"https://www.google.com/maps/place/R.+Cubat%C3%A3o,+193+-+Vila+Mariana,+S%C3%A3o+Paulo+-+SP,+04013-040/@-23.5737954,-46.6471528,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce5996e55e19fd:0xc46101fed2a6f45e!8m2!3d-23.5738003!4d-46.6445725!16s%2Fg%2F11q2nk_qp2?entry=ttu&g_ep=EgoyMDI1MDQwOC4wIKXMDSoASAFQAw%3D%3D"}>
               <address
-                className="w-full flex justify-center items-center text-blue-600 hover:text-blue-800 text-xl font-semibold border-2 border-blue-500 px-6 py-4 my-4 rounded-md shadow-md"
+                className="w-full flex justify-center items-center bg-blue-600 text-white text-xl font-semibold border-2 px-6 py-4 my-4 rounded-md shadow-md"
                 itemProp="address"
                 itemScope
                 itemType="https://schema.org/PostalAddress"
               >
                 <span className="flex justify-center items-center">
-                  <Image
-                    src="/google-maps.svg"
-                    className="w-[20px] mr-2"
-                    alt=""
-                    width={20}
-                    height={20}
-                    loading="lazy"
-                  />
                   <span itemProp="streetAddress">Saiba Como Chegar</span>
                 </span>
               </address>
             </Link>
           </div>
 
-          <div className='text-left mt-12'>
-            <h3 className='text-2xl font-semibold'>Pensado no seu bem-estar, um espaço aconchegante esperando por você! 🌿</h3>
+          <div className='text-left mt-12 mb-6'>
+            <h3 className='text-2xl font-bold text-slate-900'>Um espaço acolhedor esperando por você! 🌿</h3>
+            <p className='text-slate-600 mt-2 text-lg'>Ambiente higienizado, climatizado e pensado para o seu total relaxamento.</p>
           </div>
 
-          <div className="mt-6 flex gap-4 overflow-x-auto snap-x" role="group" aria-label="Fotos do espaço">
-            {[1, 2, 3].map((item) => (
-              <Image
-                key={item}
-                src="/espaco-de-massagem.png"
-                alt="Interior do espaço de massagem"
-                className="snap-start flex-shrink-0 shadow-sm h-[450px] w-[90vw]"
-                width={600}
-                height={450}
-                loading="lazy"
-              />
-            ))}
+          <SpaceCarousel />
+        </section>
+
+        <section aria-labelledby="cta-performance" className="my-12 w-full relative min-h-[400px] flex items-center">
+          {/* Background Image with Overlay */}
+          <div
+            className="absolute inset-0 bg-[url('/lifestyle.avif')] bg-cover bg-center z-0"
+            aria-hidden="true"
+          >
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 px-8 py-22 text-left text-white">
+            <h3 id="cta-performance" className="text-3xl leading-tight font-bold mb-4">
+              Como Terapia Corporal Melhora Desempenho Profissional e Pessoal?
+            </h3>
+            <p className="text-xl leading-relaxed mb-6 max-w-2xl">
+              Se livrar de dores e incômodos tem o poder de elevar sua performance profissional e reduzir o estresse, garantindo uma vida muito mais leve e produtiva.
+            </p>
+            <Link
+              href="https://wa.me/5511987871375"
+              className="inline-block w-full bg-[#16a34a] text-white text-lg text-center font-bold rounded-md px-8 py-2 shadow-lg hover:bg-[#13803d] transition-colors"
+            >
+              Saiba Como
+            </Link>
           </div>
         </section>
 
-        {/* Seção Serviços */}
-        <section aria-labelledby="servicos" className="mt-16 px-8 w-full">
-          <div className="text-left">
-            <div className='flex justify-start items-center gap-2'>
-              <h2 id="servicos" className="text-4xl font-bold text-gray-900 mb-2">Atendimentos</h2>
-            </div>
-            <p className='text-xl'>Serviços que garantem o bem-estar e o relaxamento de uma boa massagem</p>
-          </div>
-
-          <div className="my-8 space-y-6">
-            {/* Massagem Terapêutica */}
-            <article className="border-2 border-slate-300 rounded-md shadow-md text-left p-8" itemScope itemType="https://schema.org/Service">
-              <Image
-                src="/icone-servico-1.png"
-                className="border border-slate-400 p-2 rounded-lg mb-2"
-                alt="Ícone massagem terapêutica"
-                width={50}
-                height={50}
-                loading="lazy"
-              />
-              <h3 className="text-2xl font-bold" itemProp="name">Massagem Terapêutica</h3>
-              <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-                <meta itemProp="priceCurrency" content="BRL" />
-                <p className="p-2 px-4 shadow-md border-slate-300 border-2 rounded-lg my-2 text-2xl" itemProp="price"><b className='text-green-700 font-semibold'>R$</b> 150,00 - <time itemProp="eligibleDuration" dateTime="PT30M">30min</time></p>
-              </div>
-              <div className="my-4">
-                <p className="text-lg" itemProp="description">
-                  Técnica profissional para alívio de dores musculares e melhoria da circulação sanguínea
-                </p>
-              </div>
-              <a href="https://wa.me/5511987871375" className="inline-block w-full bg-[#16a34a] text-white text-lg font-semibold rounded-md px-6 py-3 shadow hover:bg-[#13803d] text-center">
-                Agendar Sessão ✅
-              </a>
-            </article>
-
-            {/* Drenagem Linfática */}
-            <article className="border-2 border-slate-300 rounded-md shadow-md text-left p-8" itemScope itemType="https://schema.org/Service">
-              <Image
-                src="/icone-servico-2.png"
-                className="border border-slate-400 p-2 rounded-lg mb-2"
-                alt="Ícone drenagem linfática"
-                width={50}
-                height={50}
-                loading="lazy"
-              />
-              <h3 className="text-2xl font-bold" itemProp="name">Drenagem Linfática</h3>
-              <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-                <meta itemProp="priceCurrency" content="BRL" />
-                <p className="p-2 px-4 shadow-md border-slate-300 border-2 rounded-lg my-2 text-2xl" itemProp="price"><b className='text-green-700 font-semibold'>R$</b> 150,00 - <time itemProp="eligibleDuration" dateTime="PT40M">40min</time></p>
-              </div>
-              <div className="my-4">
-                <p className="text-lg" itemProp="description">
-                  Técnica especializada para redução de inchaços e eliminação de toxinas
-                </p>
-              </div>
-              <a href="https://wa.me/5511987871375" className="inline-block w-full bg-[#16a34a] text-white text-lg font-semibold rounded-md px-6 py-3 shadow hover:bg-[#13803d] text-center">
-                Agendar Sessão ✅
-              </a>
-            </article>
-
-            {/* Pacotes */}
-            <article className="border-2 border-slate-300 rounded-md shadow-md text-left p-8" itemScope itemType="https://schema.org/Service">
-              <Image
-                src="/icone-servico-2.png"
-                className="border border-slate-400 p-2 rounded-lg mb-2"
-                alt="Ícone pacotes"
-                width={50}
-                height={50}
-                loading="lazy"
-              />
-              <h3 className="text-2xl font-bold" itemProp="name">Pacotes Mensais</h3>
-              <div className="my-4">
-                <p className="text-lg" itemProp="description">
-                  Realize mais sessões marcadas durante o mês, no seu horário e com melhores preços.
-                </p>
-              </div>
-              <a
-                href="https://wa.me/5511987871375"
-                className="flex justify-center items-center w-full border border-[#16a34a] text-lg font-semibold rounded-md px-6 py-3 shadow hover:bg-green-50"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Saiba Mais
-                <Image
-                  src="/whatsapp.webp"
-                  className="w-[25px] ml-1"
-                  alt=""
-                  width={25}
-                  height={25}
-                  loading="lazy"
-                />
-              </a>
-            </article>
-          </div>
-        </section>
 
         {/*FAQ*/}
         <FaqAccordion />
@@ -461,31 +396,33 @@ export default function Home() {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-            document.addEventListener('DOMContentLoaded', function() {
-              // Força a reprodução do vídeo em dispositivos iOS
+            (function() {
               const video = document.getElementById('bgVideo');
-              
-              // Tenta reproduzir o vídeo
-              const playPromise = video.play();
-              
-              // Se a promessa for rejeitada (como em alguns navegadores móveis)
-              if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                  // Adiciona um evento de toque para permitir a reprodução após interação do usuário
-                  document.body.addEventListener('click', function playVideo() {
+              if (!video) return;
+
+              // Função para tentar dar play
+              const attemptPlay = () => {
+                video.play().catch(() => {
+                  // Se falhar (comum no iOS/Economia de energia), aguarda primeira interação
+                  const playOnInteraction = () => {
                     video.play();
-                    // Remove o event listener após o primeiro toque
-                    document.body.removeEventListener('click', playVideo);
-                  }, { once: true });
+                    ['click', 'touchstart', 'scroll'].forEach(ev => 
+                      document.removeEventListener(ev, playOnInteraction)
+                    );
+                  };
+                  ['click', 'touchstart', 'scroll'].forEach(ev => 
+                    document.addEventListener(ev, playOnInteraction, { once: true })
+                  );
                 });
-              }
+              };
+
+              // Tenta dar play imediatamente e quando o documento estiver pronto
+              attemptPlay();
+              document.addEventListener('DOMContentLoaded', attemptPlay);
               
-              // Garante que o vídeo continue em loop mesmo se houver pausas
-              video.addEventListener('ended', function() {
-                this.currentTime = 0;
-                this.play();
-              });
-            });
+              // Garante que o loop funcione sem engasgos
+              video.addEventListener('ended', () => video.play());
+            })();
           `,
         }}
       />
