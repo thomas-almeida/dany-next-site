@@ -4,10 +4,10 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 const images = [
-  { src: '/espaco-de-massagem.png', alt: 'Nosso espaço de massagem principal' },
-  { src: '/spa-1.jpg', alt: 'Ambiente relaxante' },
-  { src: '/spa-2.jpg', alt: 'Detalhes do atendimento' },
-  { src: '/spa-3.jpg', alt: 'Conforto e bem-estar' },
+  { src: '/espaco/espaco-1.jpeg', alt: 'Nosso espaço de massagem principal' },
+  { src: '/espaco/espaco-2.jpeg', alt: 'Ambiente relaxante' },
+  { src: '/espaco/espaco-3.jpeg', alt: 'Detalhes do atendimento' },
+  { src: '/espaco/espaco-4.jpeg', alt: 'Conforto e bem-estar' },
 ];
 
 export default function SpaceCarousel() {
