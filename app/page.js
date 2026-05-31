@@ -7,9 +7,9 @@ import SpaceCarousel from './components/SpaceCarousel';
 import TestimonialCarousel from './components/TestimonialCarousel';
 
 export const metadata = {
-  title: 'Dany Massoterapia | Massagem na Vila Mariana e Paraíso - SP',
-  description: 'Massoterapia profissional em São Paulo (Vila Mariana e Paraíso). Massagem relaxante, terapêutica e drenagem linfática. Agende sua sessão hoje!',
-  keywords: 'massagem relaxante vila mariana, massagem paraíso sp, terapia corporal são paulo, drenagem linfática vila mariana, massoterapeuta sp',
+  title: 'Dany Massagem SP | Massagista na Vila Mariana • Terapêutica • Relaxante',
+  description: 'Massagista profissional perto de você na Vila Mariana e Paraíso. Massagem relaxante, terapêutica e drenagem linfática com 10 anos de experiência. Agende sua sessão!',
+  keywords: 'massagem relaxante vila mariana, massagem paraíso sp, terapia corporal são paulo, drenagem linfática vila mariana, massoterapeuta sp, massagista perto de mim, massagem perto de mim',
 };
 
 const testimonials = [
@@ -73,7 +73,67 @@ export default function Home() {
               "addressRegion": "SP"
             },
             "telephone": "+5511987871375",
-            "url": "https://danyterapia.top"
+            "url": "https://danyterapia.top",
+            "areaServed": ["Vila Mariana", "Paraíso", "São Paulo"],
+            "description": "Massoterapia profissional na Vila Mariana e Paraíso. Massagem relaxante, terapêutica e drenagem linfática.",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "30"
+            }
+          })
+        }}
+      />
+
+      <Script
+        id="schema-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Massagem terapêutica ou relaxante: qual a diferença?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A massagem relaxante usa movimentos suaves e envolventes para induzir relaxamento profundo. Já a massagem terapêutica aplica pressão mais firme em pontos específicos para aliviar dores musculares e tensões crônicas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Vocês atendem perto do metrô Paraíso?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim! Ficamos na Rua Cubatão, 193, a apenas 5 minutos a pé da estação Paraíso do metrô (linhas Azul e Verde). Também estamos próximos da estação Brigadeiro."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Massagem ajuda a melhorar a postura?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim! A massagem terapêutica libera músculos encurtados e pontos de tensão que contribuem para a má postura. Combinada com alongamentos, a massagem regular ajuda a realinhar a postura."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais os horários disponíveis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Atendo de segunda a sábado, das 9h às 16h. Podemos encontrar o melhor horário para você conforme sua rotina."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual o valor da sessão?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O valor varia entre R$150 e R$250, dependendo da técnica e duração. A massagem terapêutica (30min) e a drenagem linfática (40min) custam R$150 cada."
+                }
+              }
+            ]
           })
         }}
       />
@@ -116,18 +176,18 @@ export default function Home() {
               </header>
 
               <h1 id="main-heading" className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight mb-8">
-                Massagem na Vila Mariana e Paraíso: <span className="text-green-400">Adeus ao Estresse</span>
+                Massagista perto de você na Vila Mariana: <span className="text-green-400">Relaxamento e Bem-Estar</span>
               </h1>
 
               <p className="text-xl md:text-2xl mb-10 font-medium leading-relaxed opacity-90 max-w-2xl">
-                Aproveite os benefícios da terapia corporal em um lugar aconchegante e de fácil localização em São Paulo.
+                Massagem relaxante, terapêutica e drenagem linfática perto do metrô Paraíso. Ambiente climatizado e atendimento profissional com mais de 10 anos de experiência.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="https://wa.me/5511987871375" className="inline-block bg-[#16a34a] text-white text-center text-lg font-bold rounded-xl px-10 py-4 shadow-2xl hover:bg-[#13803d] hover:scale-105 transition-all">
+                <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" className="inline-block bg-[#16a34a] text-white text-center text-lg font-bold rounded-xl px-10 py-4 shadow-2xl hover:bg-[#13803d] hover:scale-105 transition-all">
                   Agendar Minha Sessão
                 </Link>
-                <Link href="https://wa.me/5511987871375" className="inline-block border-2 border-white/50 backdrop-blur-sm text-white text-center text-lg font-bold rounded-xl px-10 py-4 hover:bg-white/10 transition-all">
+                <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" className="inline-block border-2 border-white/50 backdrop-blur-sm text-white text-center text-lg font-bold rounded-xl px-10 py-4 hover:bg-white/10 transition-all">
                   Tirar Dúvidas
                 </Link>
               </div>
@@ -183,7 +243,7 @@ export default function Home() {
                     <span className="text-slate-400 text-sm">30min</span>
                   </div>
                   <p className="text-lg text-slate-600 mb-8 flex-grow" itemProp="description">Técnica profissional para alívio de dores musculares e melhoria da circulação.</p>
-                  <Link href="https://wa.me/5511987871375" className="block w-full bg-[#16a34a] text-white text-center font-bold py-4 rounded-2xl shadow-lg hover:bg-[#13803d] transition-all">Agendar Agora ✅</Link>
+                  <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" className="block w-full bg-[#16a34a] text-white text-center font-bold py-4 rounded-2xl shadow-lg hover:bg-[#13803d] transition-all">Agendar Agora ✅</Link>
                 </div>
               </article>
 
@@ -196,7 +256,7 @@ export default function Home() {
                     <span className="text-slate-400 text-sm">40min</span>
                   </div>
                   <p className="text-lg text-slate-600 mb-8 flex-grow" itemProp="description">Técnica especializada para redução de inchaços e eliminação de toxinas.</p>
-                  <Link href="https://wa.me/5511987871375" className="block w-full bg-[#16a34a] text-white text-center font-bold py-4 rounded-2xl shadow-lg hover:bg-[#13803d] transition-all">Agendar Agora ✅</Link>
+                  <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" className="block w-full bg-[#16a34a] text-white text-center font-bold py-4 rounded-2xl shadow-lg hover:bg-[#13803d] transition-all">Agendar Agora ✅</Link>
                 </div>
               </article>
 
@@ -208,7 +268,7 @@ export default function Home() {
                     <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Consultar</span>
                   </div>
                   <p className="text-lg text-slate-600 mb-8 flex-grow" itemProp="description">Realize mais sessões marcadas durante o mês com melhores condições.</p>
-                  <Link href="https://wa.me/5511987871375" className="block w-full border-2 border-green-500 text-green-700 text-center font-bold py-4 rounded-2xl hover:bg-green-50 transition-all">Saiba Mais</Link>
+                  <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" className="block w-full border-2 border-green-500 text-green-700 text-center font-bold py-4 rounded-2xl hover:bg-green-50 transition-all">Saiba Mais</Link>
                 </div>
               </article>
             </div>
@@ -280,7 +340,7 @@ export default function Home() {
             <p className="text-xl md:text-2xl mb-10 opacity-90 leading-relaxed">
               Se livrar de dores e incômodos tem o poder de elevar sua performance profissional e reduzir o estresse, garantindo uma vida muito mais leve.
             </p>
-            <Link href="https://wa.me/5511987871375" className="inline-block bg-[#16a34a] text-white text-xl font-bold rounded-2xl px-12 py-5 shadow-2xl hover:bg-[#13803d] transition-all">
+            <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" className="inline-block bg-[#16a34a] text-white text-xl font-bold rounded-2xl px-12 py-5 shadow-2xl hover:bg-[#13803d] transition-all">
               Saiba Como
             </Link>
           </div>
@@ -292,7 +352,7 @@ export default function Home() {
           <section aria-labelledby="cta-final" className="my-24 text-center">
             <h3 id="cta-final" className="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">Transforme Seu Bem-Estar Hoje!</h3>
             <p className="text-xl mb-10 text-slate-600">Fácil localização e lugar aconchegante esperando por você.</p>
-            <Link href="https://wa.me/5511987871375" className="inline-block bg-[#16a34a] text-white text-2xl font-bold rounded-2xl px-16 py-6 shadow-2xl hover:bg-[#13803d] transition-all">
+            <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" className="inline-block bg-[#16a34a] text-white text-2xl font-bold rounded-2xl px-16 py-6 shadow-2xl hover:bg-[#13803d] transition-all">
               Agendar Agora ✅
             </Link>
           </section>
@@ -305,7 +365,7 @@ export default function Home() {
 
       {/* WhatsApp Fixed */}
       <aside className="fixed bottom-10 right-2 z-50">
-        <Link href="https://wa.me/5511987871375" target="_blank" rel="noopener noreferrer">
+        <Link href="https://wa.me/5511987871375?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener noreferrer">
           <Image src="/whatsapp.webp" alt="WhatsApp" width={80} height={80} className="hover:scale-110 transition-transform drop-shadow-2xl" priority />
         </Link>
       </aside>

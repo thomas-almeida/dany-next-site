@@ -74,8 +74,11 @@ export const metadata = {
     google: 'Q0zjLFrZMxnyQ0pg7qy-xqrieBim5tK-7itR74qjN0w',
     yandex: 'yandex',
   },
-  themeColor: '#16a34a',
   category: 'saúde e bem-estar',
+};
+
+export const viewport = {
+  themeColor: '#16a34a',
 };
 
 export default function RootLayout({ children }) {

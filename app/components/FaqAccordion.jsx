@@ -5,14 +5,19 @@ import { useState } from 'react';
 export default function FaqAccordion() {
   const faqs = [
     {
-      question: 'Terapia Corporal é pra mim?',
+      question: 'Massagem terapêutica ou relaxante: qual a diferença?',
       answer:
-        'Com certeza! A terapia corporal é indicada para quem busca alívio de tensões musculares, melhoria da postura e sensação de bem-estar geral e garantir remover da sua rotina o stress do dia-a-dia, não importa sexo ou idade.',
+        'A massagem relaxante usa movimentos suaves e envolventes para induzir relaxamento profundo e reduzir estresse. Já a massagem terapêutica aplica pressão mais firme em pontos específicos para aliviar dores musculares, nódulos e tensões crônicas. Na sua sessão, posso combinar ambas as técnicas conforme sua necessidade.',
     },
     {
       question: 'Como funciona o atendimento?',
       answer:
-        'Agendamos uma sessão de 30 á 40 minutos em um espaço super aconchegante e de fácil localização. Durante a sessão, conversamos sobre suas necessidades e aplico técnicas de massagem personalizadas.',
+        'Agendamos uma sessão de 30 a 40 minutos em um espaço super aconchegante e de fácil localização na Vila Mariana. Durante a sessão, conversamos sobre suas necessidades e aplico técnicas de massagem personalizadas para você.',
+    },
+    {
+      question: 'Vocês atendem perto do metrô Paraíso?',
+      answer:
+        'Sim! Ficamos na Rua Cubatão, 193, a apenas 5 minutos a pé da estação Paraíso do metrô (linhas Azul e Verde). Também estamos próximos da estação Brigadeiro. Localização super fácil e central.',
     },
     {
       question: 'Quais os horários disponíveis?',
@@ -22,7 +27,12 @@ export default function FaqAccordion() {
     {
       question: 'Qual o valor da sessão?',
       answer:
-        'O valor varia entre R$120 e R$250, dependendo da técnica e duração, nos chame no Whatsapp e tire mais dúvidas diretamente comigo! Consulte pacotes promocionais e descontos para pacotes.',
+        'O valor varia entre R$150 e R$250, dependendo da técnica e duração. A massagem terapêutica (30min) e a drenagem linfática (40min) custam R$150 cada. Consulte pacotes promocionais e descontos para sessões regulares!',
+    },
+    {
+      question: 'Massagem ajuda a melhorar a postura?',
+      answer:
+        'Sim! A massagem terapêutica libera músculos encurtados e pontos de tensão que contribuem para a má postura. Combinada com alongamentos e consciência corporal, a massagem regular ajuda a realinhar a postura e reduzir dores causadas por horas sentado(a) em frente ao computador.',
     },
   ];
 

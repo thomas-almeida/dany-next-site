@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://danyterapia.vercel.app/</loc>
-        <lastmod>2024-02-04</lastmod>
+        <loc>https://danyterapia.top/</loc>
+        <lastmod>2026-05-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://danyterapia.vercel.app/agendamento.html</loc>
-        <lastmod>2024-02-04</lastmod>
+        <loc>https://danyterapia.top/massagem-vila-mariana</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://danyterapia.top/massagem-paraiso</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://danyterapia.top/massagista-vila-mariana</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://danyterapia.top/massagem-terapeutica</loc>
+        <lastmod>2026-05-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://danyterapia.vercel.app/obrigado.html</loc>
-        <lastmod>2024-02-04</lastmod>
+        <loc>https://danyterapia.top/drenagem-linfatica-sp</loc>
+        <lastmod>2026-05-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://danyterapia.top/pacotes-mensais-massagem</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://danyterapia.top/blog/massagem-relaxante-vila-mariana-beneficios</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://danyterapia.top/blog/drenagem-linfatica-para-que-serve</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://danyterapia.top/blog/massoterapia-para-dores-lombares</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
